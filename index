@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <!-- <form id="form1">
+<label>name</label>
+<input type="text" id="name" name="name"/>
+<button type="submit">Submit</button>
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        document.getElementById("form1").addEventListener("submit",async (e) => {
+            e.preventDefault();
+        
+
+        const name = document.getElementById("name").value;
+
+        const response=await fetch("http://localhost:3000/post",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({name: name})
+        })
+
+        const result = await response.json();
+        document.getElementById("message").innerText=result.message || "Success";
+
+    });
+    </script> -->
+    <form action="http://localhost:8080/post" method="POST">
+        <label>Name</label>
+        <input type="text" id="name" name="name"/>
+        <!-- <input type="hidden" name="format" value="json"> -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
